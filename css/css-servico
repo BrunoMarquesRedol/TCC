@@ -1,0 +1,25 @@
+/* Página de Serviços - Estilos específicos */
+
+.services-hero {
+  background: linear-gradient(135deg, var(--azul-escuro), var(--azul-claro));
+  padding: 120px 20px 80px;
+  text-align: center;
+  color: white;
+}
+
+.service-card {
+  background: white;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Sobrescreve estilos globais se necessário */
+header {
+  background-color: rgba(19, 41, 61, 0.9); /* Versão semi-transparente */
+}

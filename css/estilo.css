@@ -1,0 +1,409 @@
+:root {
+      --azul-escuro: #13293D;
+      --azul-medio: #006494;
+      --azul-claro: #247BA0;
+      --azul-vivo: #1B98E0;
+      --cinza-claro: #E8F1F2;
+      --letras-top: rgb(35, 41, 41);
+      --cinza-fundo: #f5f7fa; /* Nova cor de fundo cinza */
+      --cinza-texto: #555555; /* Cor para textos em fundo cinza */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 10;
+      transition: background-color 0.3s ease;
+    }
+
+    .scrolled {
+      background-color: rgba(19, 41, 61, 0.9);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #006494;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .logo-circle {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid white;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #006494;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--azul-vivo);
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../imagens/junto.jpg") center/cover no-repeat fixed;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      transition: background-position 0.3s ease-out;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .btn {
+      background-color: var(--azul-vivo);
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .btn:hover {
+      background-color: var(--azul-claro);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ATUALIZADO - Fundo cinza para serviços */
+    .services {
+      padding: 100px 20px;
+      background-color: var(--cinza-fundo);
+      text-align: center;
+    }
+    
+    .services-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 20px;
+    }
+    
+    /* ATUALIZADO - Cards com fundo branco para contraste */
+    .service-card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(0,0,0,0.05);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      border-color: var(--azul-vivo);
+    }
+    
+    .service-icon {
+      font-size: 2.5rem;
+      color: var(--azul-vivo);
+      margin-bottom: 15px;
+    }
+    
+    .service-card h3 {
+      color: var(--azul-escuro);
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+    
+    .service-card p {
+      color: var(--cinza-texto);
+      line-height: 1.6;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+      color: var(--azul-escuro);
+    }
+    
+    .section-title h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    
+    .section-title p {
+      font-size: 1.2rem;
+      color: var(--cinza-texto);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* ATUALIZADO - Fundo cinza para sobre nós */
+    .about {
+      padding: 100px 20px;
+      background-color: var(--cinza-fundo);
+      color: var(--cinza-texto);
+      text-align: center;
+    }
+
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .about h2 {
+      color: var(--azul-escuro);
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    /* NOVA SEÇÃO DE CONTATO COM FUNDO CINZA */
+    .contact {
+      padding: 100px 20px;
+      background-color: var(--cinza-fundo);
+      color: var(--cinza-texto);
+      text-align: center;
+    }
+
+    /* FOOTER SOCIAL */
+    footer {
+      background-color: #0d1f2d;
+      color: white;
+      padding: 50px 20px 30px;
+      text-align: center;
+    }
+
+    .footer-social {
+      margin-bottom: 30px;
+    }
+
+    .social-title {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: var(--cinza-claro);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-bottom: 30px;
+    }
+
+    .social-icon {
+      color: white;
+      font-size: 1.8rem;
+      transition: all 0.3s ease;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(255,255,255,0.1);
+    }
+
+    .social-icon:hover {
+      color: var(--azul-vivo);
+      transform: translateY(-5px);
+      background-color: rgba(27, 152, 224, 0.2);
+    }
+
+    .footer-contact {
+      margin: 25px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .contact-email, .contact-phone {
+      color: var(--cinza-claro);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+    }
+    
+    .contact-email:hover, .contact-phone:hover {
+      color: var(--azul-vivo);
+    }
+
+    .partners-title {
+      font-size: 0.9rem;
+      margin: 25px 0 15px;
+      color: var(--cinza-claro);
+      opacity: 0.8;
+      letter-spacing: 1px;
+    }
+
+    .footer-partners {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .partner-badge {
+      background-color: rgba(255,255,255,0.1);
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .partner-badge:hover {
+      background-color: rgba(255,255,255,0.2);
+      transform: scale(1.05);
+    }
+
+    .footer-copyright {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.6);
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      header {
+        padding: 15px 20px;
+      }
+      nav a {
+        margin-left: 10px;
+        font-size: 0.9rem;
+      }
+      .services-container {
+        grid-template-columns: 1fr;
+      }
+      .section-title h2 {
+        font-size: 2rem;
+      }
+      .social-icons {
+        gap: 15px;
+      }
+      .social-icon {
+        font-size: 1.5rem;
+        width: 40px;
+        height: 40px;
+      }
+    
+/* Variáveis e reset */
+:root {
+  --azul-escuro: #13293D;
+  --azul-medio: #006494;
+  --azul-claro: #247BA0;
+  --azul-vivo: #1B98E0;
+  --cinza-claro: #E8F1F2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+/* Componentes globais */
+.btn {
+  padding: 12px 24px;
+  background-color: var(--azul-vivo);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--azul-medio);
+}
+
+/* Header padrão */
+header {
+  position: fixed;
+  width: 100%;
+  padding: 20px;
+  background-color: var(--azul-escuro);
+  z-index: 100;
+}
+
+/* Footer padrão */
+footer {
+  background-color: var(--azul-escuro);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+    }
