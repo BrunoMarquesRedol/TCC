@@ -1,0 +1,62 @@
+/* Página de Serviços - Estilos específicos */
+
+.services-hero {
+  background: linear-gradient(135deg, var(--azul-escuro), var(--azul-claro));
+  padding: 120px 20px 80px;
+  text-align: center;
+  color: white;
+}
+
+.service-card {
+  background: white;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Sobrescreve estilos globais se necessário */
+header {
+  background-color: rgba(19, 41, 61, 0.9);
+  /* Versão semi-transparente */
+}
+
+/* CSS da descrição longa*/
+
+.long-desc {
+  max-height: 0;
+  opacity: 0;
+  overflow-y: scroll;
+  transition: all 0.4s ease;
+}
+
+.service-card.expanded {
+  background: #f0f8ff;
+}
+
+.service-card.expanded .long-desc {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 15px;
+}
+
+.long-desc ul {
+  list-style-type: circle !important;
+  background: var(--azul-transparente);
+  padding: 5px 20px;
+  /* aumenta o recuo */
+  border-radius: 12px;
+  color: var(--cinza-texto);
+  margin-left: 20px;
+  /* garante espaço para o bullet */
+}
+
+.long-desc li {
+  display: list-item !important;
+  list-style-type: circle !important;
+  margin: 5px 0 12px 0;
+}
