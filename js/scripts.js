@@ -4,10 +4,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Elementos principais
   const modal = document.getElementById('orcamentoModal');
-<<<<<<< Updated upstream
-  const btnsFooter = document.querySelectorAll('.btn-footer');
-  const closeModal = document.querySelector('.close-modal');
-=======
   const btnHero = document.getElementById('btn-hero');
   const btnFooter = document.getElementById('btn-footer');
 
@@ -16,43 +12,14 @@ document.addEventListener('DOMContentLoaded', function () {
     console.error('[ERRO] Modal não encontrado!');
     return;
   }
->>>>>>> Stashed changes
 
-  // Abre o modal ao clicar em qualquer botão de orçamento
-  btnsFooter.forEach(btn => {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      if (modal) {
-        modal.style.display = 'block';
-        document.body.style.overflow = 'hidden';
-
-<<<<<<< Updated upstream
-        // Navegação entre os passos do modal de orçamento
-        const steps = document.querySelectorAll('#orcamentoModal .step');
-        steps.forEach((step, idx) => {
-          if (idx === 0) {
-            step.classList.add('active');
-            step.style.display = 'block';
-          } else {
-            step.classList.remove('active');
-            step.style.display = 'none';
-          }
-        });
-      }
-    });
-  });
-
-  // Fecha o modal ao clicar no X
-  if (closeModal && modal) {
-    closeModal.addEventListener('click', function() {
-      modal.style.display = 'none';
-      document.body.style.overflow = 'auto';
-    });
+  // Função para abrir modal
+  function openModal() {
+    console.log('[AÇÃO] Abrindo modal');
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
   }
 
-  // Fecha o modal ao clicar fora dele
-  window.addEventListener('click', function(event) {
-=======
   // Eventos de clique (só adiciona se existir)
   if (btnHero) btnHero.addEventListener('click', openModal);
   if (btnFooter) btnFooter.addEventListener('click', openModal);
@@ -65,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Fechar ao clicar fora
   window.addEventListener('click', function (event) {
->>>>>>> Stashed changes
     if (event.target === modal) {
       modal.style.display = 'none';
       document.body.style.overflow = 'auto';
@@ -78,39 +44,6 @@ document.addEventListener('DOMContentLoaded', function () {
       const target = this.getAttribute('data-next') || this.getAttribute('data-back');
       document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
       document.getElementById(target).classList.add('active');
-    });
-  });
-
-  // Navegação entre os passos do modal de orçamento
-  const steps = document.querySelectorAll('#orcamentoModal .step');
-  const nextBtns = document.querySelectorAll('#orcamentoModal .step-btn.next');
-  const backBtns = document.querySelectorAll('#orcamentoModal .step-btn.back');
-
-  nextBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-      const currentStep = this.closest('.step');
-      const nextStepId = this.getAttribute('data-next');
-      const nextStep = document.getElementById(nextStepId);
-      if (currentStep && nextStep) {
-        currentStep.classList.remove('active');
-        currentStep.style.display = 'none';
-        nextStep.classList.add('active');
-        nextStep.style.display = 'block';
-      }
-    });
-  });
-
-  backBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-      const currentStep = this.closest('.step');
-      const backStepId = this.getAttribute('data-back');
-      const backStep = document.getElementById(backStepId);
-      if (currentStep && backStep) {
-        currentStep.classList.remove('active');
-        currentStep.style.display = 'none';
-        backStep.classList.add('active');
-        backStep.style.display = 'block';
-      }
     });
   });
 

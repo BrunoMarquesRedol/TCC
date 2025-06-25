@@ -9,6 +9,7 @@
 
 .service-card {
   background: white;
+  
   border-radius: 8px;
   padding: 30px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -17,6 +18,7 @@
 
 .service-card:hover {
   transform: translateY(-10px);
+  cursor: pointer;
 }
 
 /* Sobrescreve estilos globais se necessário */
@@ -42,14 +44,15 @@
 }
 
 .long-desc ul {
-  list-style-type: circle !important;
-  background: var(--azul-transparente);
-  padding: 5px 20px;
-  /* aumenta o recuo */
-  border-radius: 12px;
-  color: var(--cinza-texto);
-  margin-left: 20px;
-  /* garante espaço para o bullet */
+  display: flex;
+    list-style-type: circle !important;
+    background: var(--azul-transparente);
+    padding: 5px 20px;
+    border-radius: 12px;
+    justify-content: center;
+    color: var(--cinza-texto);
+    margin-left: 20px;
+    flex-direction: column;
 }
 
 .long-desc li {

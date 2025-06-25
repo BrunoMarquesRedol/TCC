@@ -19,9 +19,9 @@
       DesenvolveTec
     </a>
     <nav>
+      <a href="index.php">Home</a>
       <a href="servicos.php">Serviços</a>
-      <a href="index.php#about">Sobre</a>
-      <a href="contato.php" class="active">Contato</a>
+      <a href="index.php">Sobre</a>
     </nav>
   </header>
 
@@ -135,7 +135,7 @@
           Entre em contato conosco para receber seu orçamento e 
           nossas soluções diante sua demanda.
         </p>
-        <button class="btn btn-footer">Solicitar Orçamento</button>
+        <button class="btn btn-footer" id="btn-footer">Solicitar Orçamento</button>
       </div>
     </div>
     <div id="footer_copyright">

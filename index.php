@@ -42,7 +42,7 @@
     <div class="hero-content">
       <h1>Somos a DesenvolveTec</h1>
       <p>Soluções completas para seu negócio crescer no digital: design, desenvolvimento e marketing integrados.</p>
-      <button class="btn" id="btn-hero">Solicitar Orçamento</button>
+      <button class="btn btn-footer" id="btn-footer">Solicitar Orçamento</button>
     </div>
   </section>
 
