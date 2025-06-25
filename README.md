@@ -1,1 +1,1 @@
-bruno gay
+bruno lindo

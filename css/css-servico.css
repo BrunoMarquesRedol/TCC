@@ -1,62 +1,107 @@
 /* Página de Serviços - Estilos específicos */
-
 .services-hero {
   background: linear-gradient(135deg, var(--azul-escuro), var(--azul-claro));
-  padding: 120px 20px 80px;
+  padding: 150px 20px 80px; /* Aumentei o padding-top para 150px */
   text-align: center;
   color: white;
 }
 
+/* HEADER - Mantendo consistente com a página principal */
+header {
+  background-color: rgba(19, 41, 61, 0.9) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+nav a {
+  color: white !important;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+nav a.active {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* CARDS DE SERVIÇOS */
 .service-card {
   background: white;
   border-radius: 8px;
   padding: 30px;
+  margin: 20px auto;
+  max-width: 900px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .service-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Sobrescreve estilos globais se necessário */
-header {
-  background-color: rgba(19, 41, 61, 0.9);
-  /* Versão semi-transparente */
+.service-icon {
+  font-size: 2.5rem;
+  color: var(--azul-vivo);
+  margin-bottom: 15px;
 }
 
-/* CSS da descrição longa*/
-
+/* DESCRIÇÃO EXPANDÍVEL */
 .long-desc {
   max-height: 0;
   opacity: 0;
-  overflow-y: scroll;
+  overflow-y: auto;
   transition: all 0.4s ease;
 }
 
 .service-card.expanded {
   background: #f0f8ff;
+  border-left: 4px solid var(--azul-vivo);
 }
 
 .service-card.expanded .long-desc {
-  max-height: 200px;
+  max-height: 500px;
   opacity: 1;
+  padding-top: 15px;
   margin-top: 15px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .long-desc ul {
-  list-style-type: circle !important;
+  list-style-type: circle;
   background: var(--azul-transparente);
-  padding: 5px 20px;
-  /* aumenta o recuo */
+  padding: 15px 25px;
   border-radius: 12px;
   color: var(--cinza-texto);
-  margin-left: 20px;
-  /* garante espaço para o bullet */
+  margin: 15px 0;
 }
 
 .long-desc li {
-  display: list-item !important;
-  list-style-type: circle !important;
-  margin: 5px 0 12px 0;
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+.long-desc b {
+  color: var(--azul-escuro);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .services-hero {
+    padding: 120px 20px 60px;
+  }
+  
+  .service-card {
+    padding: 20px;
+    margin: 15px 10px;
+  }
+  
+  .long-desc ul {
+    padding: 10px 15px;
+  }
 }
