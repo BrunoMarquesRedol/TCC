@@ -33,7 +33,7 @@
     </a>
     <nav>
       <a href="servicos.php">Serviços</a>
-      <a href="#about">Sobre</a>
+      <a href="sobre.php">Sobre</a>
       <a href="#contact">Contato</a>
     </nav>
   </header>
