@@ -14,16 +14,16 @@
 <body>
 
   <header id="mainHeader">
-    <div class="logo">
-      <img src="imagens/logo_azul.png" alt="Logo DesenvolveTec" class="logo-circle">
-      DesenvolveTec
-    </div>
-    <nav>
-      <a href="servicos.php">Serviços</a>
-      <a href="#about">Sobre</a>
-      <a href="#contact">Contato</a>
-    </nav>
-  </header>
+  <a href="index.php" class="logo">
+    <img src="imagens/logo_azul.png" alt="Logo DesenvolveTec" class="logo-circle">
+    DesenvolveTec
+  </a>
+  <nav>
+    <a href="servicos.php">Serviços</a>
+    <a href="#about">Sobre</a>
+    <a href="#contact">Contato</a>
+  </nav>
+</header>
 
   <section class="hero" id="heroSection">
     <div class="hero-content">
