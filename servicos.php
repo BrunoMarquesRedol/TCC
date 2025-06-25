@@ -49,7 +49,7 @@
         <div class="long-desc">
           <p>Desenvolvemos sites e sistemas personalizados utilizando ferramentas robustas e modernas:</p>
           <ul>
-            <li><b>HTML:</b>para estruturar o conteúdo de forma clara e acessível;</li>
+            <li><img src=" imagens/html.ico" ><b>HTML:</b>para estruturar o conteúdo de forma clara e acessível;</li>
             <li><b>CSS:</b>para aplicar estilos responsivos e profissionais;</li>
             <li><b>JavaScript:</b>para tornar as interfaces dinâmicas e interativas;</li>
             <li><b>PHP:</b>para o desenvolvimento backend e lógica de sistemas;</li>
