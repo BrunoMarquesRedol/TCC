@@ -34,7 +34,7 @@
     <nav>
       <a href="servicos.php">Serviços</a>
       <a href="sobre.php">Sobre</a>
-      <a href="#contact">Contato</a>
+      <a href="contato.php">Contato</a>
     </nav>
   </header>
 

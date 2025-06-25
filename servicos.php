@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Serviços | DesenvolveTec</title>
 
+  <script src="js/scripts.js"></script>
+
   <!-- CSS Global (obrigatório em todas páginas) -->
   <link rel="stylesheet" href="css/estilo.css">
 
@@ -37,7 +39,7 @@
       <div class="hero-content">
         <h1>Nossos Serviços</h1>
         <p>Conheça nossas soluções especializadas</p>
-           <button class="btn">Solicitar Orçamento</button>
+      <button class="btn" id="btn-hero">Solicitar Orçamento</button>
       </div>
     </section>
 <!-- Modal de Orçamento -->

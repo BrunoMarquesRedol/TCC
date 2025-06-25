@@ -1,11 +1,22 @@
 // Controle do Modal de Orçamento
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   console.log('[DEBUG] Modal script iniciado');
-  
+
   // Elementos principais
   const modal = document.getElementById('orcamentoModal');
+<<<<<<< Updated upstream
   const btnsFooter = document.querySelectorAll('.btn-footer');
   const closeModal = document.querySelector('.close-modal');
+=======
+  const btnHero = document.getElementById('btn-hero');
+  const btnFooter = document.getElementById('btn-footer');
+
+  // Verificação crítica (só exige o modal)
+  if (!modal) {
+    console.error('[ERRO] Modal não encontrado!');
+    return;
+  }
+>>>>>>> Stashed changes
 
   // Abre o modal ao clicar em qualquer botão de orçamento
   btnsFooter.forEach(btn => {
@@ -15,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         modal.style.display = 'block';
         document.body.style.overflow = 'hidden';
 
+<<<<<<< Updated upstream
         // Navegação entre os passos do modal de orçamento
         const steps = document.querySelectorAll('#orcamentoModal .step');
         steps.forEach((step, idx) => {
@@ -40,6 +52,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Fecha o modal ao clicar fora dele
   window.addEventListener('click', function(event) {
+=======
+  // Eventos de clique (só adiciona se existir)
+  if (btnHero) btnHero.addEventListener('click', openModal);
+  if (btnFooter) btnFooter.addEventListener('click', openModal);
+
+  // Fechar modal
+  document.querySelector('.close-modal').addEventListener('click', function () {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  });
+
+  // Fechar ao clicar fora
+  window.addEventListener('click', function (event) {
+>>>>>>> Stashed changes
     if (event.target === modal) {
       modal.style.display = 'none';
       document.body.style.overflow = 'auto';
@@ -48,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Navegação entre passos (se houver)
   document.querySelectorAll('[data-next], [data-back]').forEach(btn => {
-    btn.addEventListener('click', function() {
+    btn.addEventListener('click', function () {
       const target = this.getAttribute('data-next') || this.getAttribute('data-back');
       document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
       document.getElementById(target).classList.add('active');
@@ -91,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Envio do formulário com AJAX
   const form = document.getElementById('orcamentoForm');
   if (form) {
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', function (e) {
       e.preventDefault();
 
       // Mostrar loading
@@ -108,34 +134,34 @@ document.addEventListener('DOMContentLoaded', function() {
         method: 'POST',
         body: formData
       })
-      .then(resp => resp.text())
-      .then(data => {
-        if (data.trim() === "ok") {
-          alert('Solicitação enviada com sucesso!');
-          modal.style.display = 'none';
-          this.reset();
-          // Se houver múltiplos passos, volta para o primeiro
-          const step1 = document.getElementById('step1');
-          if (step1) step1.classList.add('active');
-        } else {
+        .then(resp => resp.text())
+        .then(data => {
+          if (data.trim() === "ok") {
+            alert('Solicitação enviada com sucesso!');
+            modal.style.display = 'none';
+            this.reset();
+            // Se houver múltiplos passos, volta para o primeiro
+            const step1 = document.getElementById('step1');
+            if (step1) step1.classList.add('active');
+          } else {
+            alert('Erro ao enviar. Tente novamente.');
+          }
+        })
+        .catch(error => {
+          console.error('Erro:', error);
           alert('Erro ao enviar. Tente novamente.');
-        }
-      })
-      .catch(error => {
-        console.error('Erro:', error);
-        alert('Erro ao enviar. Tente novamente.');
-      })
-      .finally(() => {
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalText;
-      });
+        })
+        .finally(() => {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+        });
     });
   }
 });
 
 // Scroll suave (mantido separado por ser independente)
 document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
+  anchor.addEventListener('click', function (e) {
     e.preventDefault();
     document.querySelector(this.getAttribute('href')).scrollIntoView({
       behavior: 'smooth',
