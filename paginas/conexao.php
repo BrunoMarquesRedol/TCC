@@ -1,14 +1,17 @@
 <?php
 $host = 'localhost';
-$db   = 'desenvolvetecsite'; // Nome exato do banco
-$user = 'root'; // Usuário padrão do XAMPP
-$pass = '';     // Senha vazia no XAMPP padrão
-$charset = 'utf8mb4';
+$user = 'seu_usuario';
+$password = 'sua_senha';
+$database = 'desenvolvetec';
 
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$db;charset=$charset", $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ATTR_ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Erro de conexão: " . $e->getMessage());
+// Criar conexão
+$conn = new mysqli($host, $user, $password, $database);
+
+// Verificar conexão
+if ($conn->connect_error) {
+    die("Falha na conexão: " . $conn->connect_error);
 }
+
+// Definir charset
+$conn->set_charset("utf8");
 ?>

@@ -10,26 +10,39 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+ <!-- Js de fora-->
+  <script src="js/scripts.js"></script>
+
+  <div vw class="enabled" id="vlibras">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
 
 <body>
 
   <header id="mainHeader">
-  <a href="index.php" class="logo">
-    <img src="imagens/logo_azul.png" alt="Logo DesenvolveTec" class="logo-circle">
-    DesenvolveTec
-  </a>
-  <nav>
-    <a href="servicos.php">Serviços</a>
-    <a href="#about">Sobre</a>
-    <a href="#contact">Contato</a>
-  </nav>
-</header>
+    <a href="index.php" class="logo">
+      <img src="imagens/logo_azul.png" alt="Logo DesenvolveTec" class="logo-circle">
+      DesenvolveTec
+    </a>
+    <nav>
+      <a href="servicos.php">Serviços</a>
+      <a href="#about">Sobre</a>
+      <a href="#contact">Contato</a>
+    </nav>
+  </header>
 
   <section class="hero" id="heroSection">
     <div class="hero-content">
       <h1>Somos a DesenvolveTec</h1>
       <p>Soluções completas para seu negócio crescer no digital: design, desenvolvimento e marketing integrados.</p>
-      <button class="btn">Solicitar Orçamento</button>
+      <button class="btn" id="btn-hero">Solicitar Orçamento</button>
     </div>
   </section>
 
@@ -113,9 +126,108 @@
       <h2>Entre em Contato</h2>
       <p>Tem um projeto em mente? Vamos conversar sobre como podemos ajudar seu negócio a crescer.</p>
     </div>
-
-    <!-- Formulário pode ser adicionado aqui posteriormente -->
   </section>
+
+  <!-- Modal de Orçamento -->
+  <div id="orcamentoModal" class="modal-orcamento">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <form id="orcamentoForm">
+        <!-- Passo 1 - Informações Básicas -->
+        <div class="step active" id="step1">
+          <h3 class="step-title">Informações Básicas</h3>
+          <div class="form-group">
+            <label for="nome">Nome Completo*</label>
+            <input type="text" id="nome" name="nome" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail*</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="telefone">Telefone/WhatsApp*</label>
+            <input type="tel" id="telefone" name="telefone" required>
+          </div>
+          <div class="form-group">
+            <label for="empresa">Empresa/Projeto</label>
+            <input type="text" id="empresa" name="empresa">
+          </div>
+          <div class="step-nav">
+            <button type="button" class="step-btn next" data-next="step2">Próximo</button>
+          </div>
+        </div>
+
+        <!-- Passo 2 - Serviços -->
+        <div class="step" id="step2">
+          <h3 class="step-title">Quais serviços você precisa?</h3>
+          <div class="service-options">
+            <div class="service-option">
+              <input type="checkbox" id="servico1" name="servicos[]" value="Design Exclusivo">
+              <label for="servico1">Design Exclusivo</label>
+            </div>
+            <div class="service-option">
+              <input type="checkbox" id="servico2" name="servicos[]" value="Desenvolvimento Front-end">
+              <label for="servico2">Front-end</label>
+            </div>
+            <div class="service-option">
+              <input type="checkbox" id="servico3" name="servicos[]" value="Desenvolvimento Back-end">
+              <label for="servico3">Back-end</label>
+            </div>
+            <div class="service-option">
+              <input type="checkbox" id="servico4" name="servicos[]" value="Marketing Digital">
+              <label for="servico4">Marketing Digital</label>
+            </div>
+            <div class="service-option">
+              <input type="checkbox" id="servico5" name="servicos[]" value="Performance & Analytics">
+              <label for="servico5">Analytics</label>
+            </div>
+            <div class="service-option">
+              <input type="checkbox" id="servico6" name="servicos[]" value="Suporte Contínuo">
+              <label for="servico6">Suporte</label>
+            </div>
+          </div>
+          <div class="step-nav">
+            <button type="button" class="step-btn back" data-back="step1">Voltar</button>
+            <button type="button" class="step-btn next" data-next="step3">Próximo</button>
+          </div>
+        </div>
+
+        <!-- Passo 3 - Detalhes -->
+        <div class="step" id="step3">
+          <h3 class="step-title">Conte mais sobre seu projeto</h3>
+          <div class="form-group">
+            <label for="prazo">Prazo estimado</label>
+            <select id="prazo" name="prazo">
+              <option value="">Selecione</option>
+              <option value="Urgente (1-2 semanas)">Urgente (1-2 semanas)</option>
+              <option value="Curto prazo (3-4 semanas)">Curto prazo (3-4 semanas)</option>
+              <option value="Médio prazo (1-2 meses)">Médio prazo (1-2 meses)</option>
+              <option value="Sem prazo definido">Sem prazo definido</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="orcamento">Orçamento previsto</label>
+            <select id="orcamento" name="orcamento">
+              <option value="">Selecione</option>
+              <option value="Até R$ 1.000">Até R$ 1.000</option>
+              <option value="R$ 1.000 - R$ 3.000">R$ 1.000 - R$ 3.000</option>
+              <option value="R$ 3.000 - R$ 5.000">R$ 3.000 - R$ 5.000</option>
+              <option value="Acima de R$ 5.000">Acima de R$ 5.000</option>
+              <option value="Ainda não defini">Ainda não defini</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="detalhes">Detalhes do projeto*</label>
+            <textarea id="detalhes" name="detalhes" required placeholder="Descreva seu projeto, objetivos, necessidades específicas e qualquer outra informação relevante..."></textarea>
+          </div>
+          <div class="step-nav">
+            <button type="button" class="step-btn back" data-back="step2">Voltar</button>
+            <button type="submit" class="form-submit">Enviar Solicitação</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 
   <!-- Footer Padrão -->
   <footer>
@@ -125,7 +237,6 @@
           <img src="imagens/logo_azul.png" alt="Logo DesenvolveTec" class="logo-circle">
           <p>DesenvolveTec</p>
         </div>
-
 
         <div id="footer_social_media">
           <a href="https://www.instagram.com/agenciadesenvolvetec?utm_source=ig_web_button_share_sheet&igsh=MWsyazAzZ280azNwdA==" class="footer-link" id="instagram">
@@ -141,8 +252,6 @@
           </a>
         </div>
       </div>
-
-
 
       <ul class="footer-list">
         <li>
@@ -164,7 +273,7 @@
           <h3>Serviços</h3>
         </li>
         <li>
-                <a href="#" class="footer-link">Marketing</a>
+          <a href="#" class="footer-link">Marketing</a>
         </li>
         <li>
           <a href="#" class="footer-link">Sites</a>
@@ -176,15 +285,11 @@
 
       <div id="footer_subscribe">
         <h3>Solicitações</h3>
-
         <p>
           Entre em contato conosco para receber seu orçamento e 
           nossas soluções diante sua demanda.
         </p>
-
-     
         <button class="btn" id="btn-footer">Solicitar Orçamento</button>
-        </div>
       </div>
     </div>
     
@@ -192,24 +297,11 @@
       <p>&copy; 2023 DesenvolveTec. Todos os direitos reservados.</p>
     </div>
   </footer>
+  
   <a class="whatsapp-link" href="https://web.whatsapp.com/send?phone=55 11 91281-2313">
-		  <i class="fa-brands fa-whatsapp"></i>
-</a>
-  <!-- Js de fora-->
-  <script src="js/scripts.js">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
 
-  </script>
-
-    <div vw class="enabled" id="vlibras">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-          <div class="vw-plugin-top-wrapper"></div>
-        </div>
-      </div>
-      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-      <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-      </script>
+ 
 </body>
-
 </html>

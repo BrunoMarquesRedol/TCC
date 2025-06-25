@@ -40,7 +40,108 @@
            <button class="btn">Solicitar Orçamento</button>
       </div>
     </section>
-
+<!-- Modal de Orçamento -->
+<div id="orcamentoModal" class="modal-orcamento">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="budget-steps">
+            <!-- Passo 1 - Informações Básicas -->
+            <div class="step active" id="step1">
+                <h3 class="step-title">Informações Básicas</h3>
+                <form id="orcamentoForm">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo*</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone/WhatsApp*</label>
+                        <input type="tel" id="telefone" name="telefone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="empresa">Empresa/Projeto</label>
+                        <input type="text" id="empresa" name="empresa">
+                    </div>
+                    <div class="step-nav">
+                        <button type="button" class="step-btn next" data-next="step2">Próximo</button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Passo 2 - Serviços -->
+            <div class="step" id="step2">
+                <h3 class="step-title">Quais serviços você precisa?</h3>
+                <div class="service-options">
+                    <div class="service-option">
+                        <input type="checkbox" id="servico1" name="servicos[]" value="Design Exclusivo">
+                        <label for="servico1">Design Exclusivo</label>
+                    </div>
+                    <div class="service-option">
+                        <input type="checkbox" id="servico2" name="servicos[]" value="Desenvolvimento Front-end">
+                        <label for="servico2">Front-end</label>
+                    </div>
+                    <div class="service-option">
+                        <input type="checkbox" id="servico3" name="servicos[]" value="Desenvolvimento Back-end">
+                        <label for="servico3">Back-end</label>
+                    </div>
+                    <div class="service-option">
+                        <input type="checkbox" id="servico4" name="servicos[]" value="Marketing Digital">
+                        <label for="servico4">Marketing Digital</label>
+                    </div>
+                    <div class="service-option">
+                        <input type="checkbox" id="servico5" name="servicos[]" value="Performance & Analytics">
+                        <label for="servico5">Analytics</label>
+                    </div>
+                    <div class="service-option">
+                        <input type="checkbox" id="servico6" name="servicos[]" value="Suporte Contínuo">
+                        <label for="servico6">Suporte</label>
+                    </div>
+                </div>
+                <div class="step-nav">
+                    <button type="button" class="step-btn back" data-back="step1">Voltar</button>
+                    <button type="button" class="step-btn next" data-next="step3">Próximo</button>
+                </div>
+            </div>
+            
+            <!-- Passo 3 - Detalhes -->
+            <div class="step" id="step3">
+                <h3 class="step-title">Conte mais sobre seu projeto</h3>
+                <div class="form-group">
+                    <label for="prazo">Prazo estimado</label>
+                    <select id="prazo" name="prazo">
+                        <option value="">Selecione</option>
+                        <option value="Urgente (1-2 semanas)">Urgente (1-2 semanas)</option>
+                        <option value="Curto prazo (3-4 semanas)">Curto prazo (3-4 semanas)</option>
+                        <option value="Médio prazo (1-2 meses)">Médio prazo (1-2 meses)</option>
+                        <option value="Sem prazo definido">Sem prazo definido</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="orcamento">Orçamento previsto</label>
+                    <select id="orcamento" name="orcamento">
+                        <option value="">Selecione</option>
+                        <option value="Até R$ 1.000">Até R$ 1.000</option>
+                        <option value="R$ 1.000 - R$ 3.000">R$ 1.000 - R$ 3.000</option>
+                        <option value="R$ 3.000 - R$ 5.000">R$ 3.000 - R$ 5.000</option>
+                        <option value="Acima de R$ 5.000">Acima de R$ 5.000</option>
+                        <option value="Ainda não defini">Ainda não defini</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="detalhes">Detalhes do projeto*</label>
+                    <textarea id="detalhes" name="detalhes" required placeholder="Descreva seu projeto, objetivos, necessidades específicas e qualquer outra informação relevante..."></textarea>
+                </div>
+                <div class="step-nav">
+                    <button type="button" class="step-btn back" data-back="step2">Voltar</button>
+                    <button type="submit" class="form-submit">Enviar Solicitação</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <div class="services-highlight">
       <div class="service-card" onclick="toggleCard(this)">
         <i class="fas fa-code service-icon"></i>
