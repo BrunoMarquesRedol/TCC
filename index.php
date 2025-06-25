@@ -289,7 +289,7 @@
           Entre em contato conosco para receber seu orçamento e 
           nossas soluções diante sua demanda.
         </p>
-        <button class="btn" id="btn-footer">Solicitar Orçamento</button>
+        <button class="btn btn-footer" id="btn-hero">Solicitar Orçamento</button>
       </div>
     </div>
     

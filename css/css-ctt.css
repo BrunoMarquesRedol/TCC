@@ -1,0 +1,88 @@
+.contato-section {
+  background: #f9f9f9;
+  padding: 40px 0;
+}
+
+.contato-container {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 32px 24px;
+}
+
+.contato-form .form-group {
+  margin-bottom: 18px;
+}
+
+.contato-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.contato-form input,
+.contato-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #5e5e5e;
+  border-radius: 5px;
+  font-size: 1rem;
+  resize: none;
+}
+
+.contato-form textarea {
+  min-height: 100px;
+}
+
+.btn-enviar {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-enviar:hover {
+  background: #0056b3;
+}
+
+#contatoMsg {
+  margin-top: 18px;
+  font-weight: 500;
+}
+
+.contato-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contato-lista li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  font-size: 1.08rem;
+}
+
+.contato-lista i {
+  font-size: 1.3em;
+  margin-right: 12px;
+  color: #007bff;
+  min-width: 24px;
+  text-align: center;
+}
+
+.contato-lista a {
+  color: #007bff;
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+.contato-lista strong {
+  margin-right: 4px;
+}
