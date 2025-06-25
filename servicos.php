@@ -26,8 +26,8 @@
     </div>
     <nav>
       <a href="index.php">Home</a>
-      <a href="servicos.php" class="active">Serviços</a>
-      <a href="#contato">Contato</a>
+      <a href="sobre.php">Sobre</a>
+      <a href="contato.php">Contato</a>
     </nav>
   </header>
 

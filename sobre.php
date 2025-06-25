@@ -22,8 +22,7 @@
     <nav id="mainNav">
       <a href="index.php">Home</a>
       <a href="servicos.php">Serviços</a>
-      <a href="sobre.php" class="active">Sobre</a>
-      <a href="#contato">Contato</a>
+      <a href="contato.php">Contato</a>
     </nav>
   </header>
 
@@ -159,6 +158,74 @@
       </div>
     </div>
   </section>
+  
+  <footer>
+    <div id="footer_content">
+      <div id="footer_contacts">
+        <div class="logo" id="logo-footer">
+          <img src="imagens/logo_azul.png" alt="Logo DesenvolveTec" class="logo-circle">
+          <p>DesenvolveTec</p>
+        </div>
+
+        <div id="footer_social_media">
+          <a href="https://www.instagram.com/agenciadesenvolvetec?utm_source=ig_web_button_share_sheet&igsh=MWsyazAzZ280azNwdA==" class="footer-link" id="instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="#" class="footer-link" id="github">
+            <i class="fa-brands fa-github"></i>
+          </a>
+
+          <a  href="https://web.whatsapp.com/send?phone=55 11 91281-2313"  class="footer-link" id="whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <ul class="footer-list">
+        <li>
+          <h3>Navegação</h3>
+        </li>
+        <li>
+          <a href="servicos.php" class="footer-link">Serviços</a>
+        </li>
+        <li>
+          <a href="sobre.php" class="footer-link">Sobre Nòs</a>
+        </li>
+        <li>
+          <a href="contato.php" class="footer-link">FAQ</a>
+        </li>
+      </ul>
+
+      <ul class="footer-list">
+        <li>
+          <h3>Serviços</h3>
+        </li>
+        <li>
+          <a href="#" class="footer-link">Marketing</a>
+        </li>
+        <li>
+          <a href="#" class="footer-link">Sites</a>
+        </li>
+        <li>
+          <a href="#" class="footer-link">Suporte</a>
+        </li>
+      </ul>
+
+      <div id="footer_subscribe">
+        <h3>Solicitações</h3>
+        <p>
+          Entre em contato conosco para receber seu orçamento e 
+          nossas soluções diante sua demanda.
+        </p>
+        <button class="btn" id="btn-footer">Solicitar Orçamento</button>
+      </div>
+    </div>
+    
+    <div id="footer_copyright">
+      <p>&copy; 2023 DesenvolveTec. Todos os direitos reservados.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
