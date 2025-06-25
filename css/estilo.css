@@ -46,7 +46,7 @@ header {
   justify-content: space-between;
   z-index: 10;
   transition: background-color 0.3s ease;
-  background-color: rgba(19, 41, 61, 0.9);
+  background-color: transparent;
 }
 
 

@@ -151,10 +151,10 @@
           <p>Desenvolvemos sites e sistemas personalizados utilizando ferramentas robustas e modernas:</p>
           <ul>
             <li><img src=" imagens/html.ico" ><b>HTML:</b>para estruturar o conteúdo de forma clara e acessível;</li>
-            <li><b>CSS:</b>para aplicar estilos responsivos e profissionais;</li>
-            <li><b>JavaScript:</b>para tornar as interfaces dinâmicas e interativas;</li>
-            <li><b>PHP:</b>para o desenvolvimento backend e lógica de sistemas;</li>
-            <li><b>MySQL:</b>para armazenamento de dados de forma segura, estruturada e eficiente;</li>
+            <li><img src=" imagens/css.ico" ><b>CSS:</b>para aplicar estilos responsivos e profissionais;</li>
+            <li><img src=" imagens/js.ico" ><b>JavaScript:</b>para tornar as interfaces dinâmicas e interativas;</li>
+            <li><img src=" imagens/php.ico" ><b>PHP:</b>para o desenvolvimento backend e lógica de sistemas;</li>
+            <li><img src=" imagens/MySql.ico" ><b>MySQL:</b>para armazenamento de dados de forma segura, estruturada e eficiente;</li>
           </ul>
          <p>Com essas tecnologias, entregamos soluções completas, otimizadas para performance, usabilidade e segurança.</p>
         </div>
