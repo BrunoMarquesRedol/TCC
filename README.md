@@ -22,7 +22,7 @@ O projeto tem como objetivo [**APLICAÇÂO WEB** -  apresentar uma solução ino
 | Categoria | Tecnologia |
 | :--- | :--- |
 | **Backend** | **PHP** (para lógica e controle de dados) |
-| **Banco de Dados** | **MySQL/MariaDB** (Script de criação da base de dados em `bd/desenvolvetec.sql`) |
+| **Banco de Dados** | **phpmyadmin/SQL** (Script de criação da base de dados em `bd/desenvolvetec.sql`) |
 | **Frontend** | **HTML5** e **CSS3** |
 | **Ambiente** | **Servidor Web Apache** (via XAMPP/WAMP) |
 
