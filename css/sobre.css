@@ -1,0 +1,209 @@
+body {
+    font-family: "Segoe UI", sans-serif;
+    color: var(--texto);
+    background-color: #fff;
+}
+
+.hero{
+    align-items: center;
+}
+
+.hero a {
+    padding: 12px 24px;
+    border: 2px solid white;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--azul-medio);
+    text-align: center;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: bold;   
+    background-color: white;  
+    transition: 0.3s ease-in-out;
+}
+    
+   
+.hero a:hover {
+    background-color: transparent;
+    color: var(--cinza-claro);
+}
+
+.bloco {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 10%;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.bloco:nth-child(even) {
+    flex-direction: row-reverse;
+    background-color: #f7f9fc;
+}
+
+.texto {
+    flex: 1;
+}
+
+.texto h2 {
+    font-size: 2.5rem;
+    color: var(--azul-medio);
+    margin-bottom: 20px;
+}
+
+.texto p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.imagem {
+    flex: 1;
+}
+
+.imagem img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.equipe {
+    text-align: center;
+    padding: 60px 10%;
+}
+
+.equipe h2 {
+    font-size: 2.5rem;
+    color: var(--azul-escuro);
+    margin-bottom: 40px;
+}
+
+.membros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.membro {
+    width: 220px;
+    background-color: #f0f4f8;
+    border-radius: 15px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.membro:hover {
+    transform: translateY(-5px);
+}
+
+.membro img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.membro h4 {
+    margin: 15px 0 5px;
+    font-size: 1.1rem;
+    color: var(--azul-medio);
+}
+
+.membro p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.footer-membros-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+  max-width: 100%;
+  margin-top: 10px;
+}
+
+.footer-membro {
+  background: #f7f9fc;
+  border-radius: 6px;
+  padding: 6px 12px;
+  min-width: 120px;
+  max-width: 180px;
+  font-size: 0.95em;
+  text-align: center;
+  box-shadow: 0 0 4px rgba(0,0,0,0.04);
+  white-space: normal;
+  word-break: break-word;
+}
+
+.footer-membro strong {
+  color: #006494;
+  font-size: 1em;
+}
+
+.footer-membro small {
+  color: #555;
+  font-size: 0.85em;
+}
+
+/* Para telas pequenas, rolagem horizontal */
+@media (max-width: 900px) {
+  .footer-membros-lista {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+  .footer-membro {
+    min-width: 140px;
+    max-width: 180px;
+    flex: 0 0 auto;
+  }
+}
+
+@media (max-width: 1200px) {
+    .hero {
+        background-size: 150%;
+        height: 80vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        background-size: 200%;
+        height: 60vh;
+    }
+
+    .bloco {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #bloco{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .texto h2 {
+        font-size: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .membro {
+        width: 65%;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero {
+        background-size: 250%;
+        height: 50vh;
+    }
+}

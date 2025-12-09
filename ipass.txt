@@ -1,0 +1,11 @@
+-- Resetar senhas para garantir que funcionem
+UPDATE usuarios SET password = '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi' 
+WHERE username IN ('admin', 'gestor', 'marketing');
+
+-- Ou criar um usuário novo se precisar:
+INSERT INTO usuarios (username, password, nome, email, nivel) VALUES 
+('teste', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Usuário Teste', 'teste@desenvolvetec.com', 'admin');
+
+
+user:admin
+senha:password

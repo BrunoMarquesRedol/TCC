@@ -4,6 +4,11 @@ $user = 'seu_usuario';
 $password = 'sua_senha';
 $database = 'desenvolvetec';
 
+<<<<<<< HEAD
+=======
+$_davi="davi"
+
+>>>>>>> 8259761 (feat: Adiciona as novas funcionalidades e atualizações)
 // Criar conexão
 $conn = new mysqli($host, $user, $password, $database);
 
