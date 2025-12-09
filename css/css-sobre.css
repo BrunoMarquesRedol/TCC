@@ -1,0 +1,193 @@
+:root {
+    --azul-escuro: #13293D;
+    --azul-claro: #1B98E0;
+    --azul-medio: #006494;
+    --texto: #222;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    color: var(--texto);
+    background-color: #fff;
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+            url("../imagens/junto.jpg") center/cover no-repeat fixed;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        position: relative;
+        transition: background-position 0.3s ease-out;
+        align-items: center;
+}
+
+.hero h1 {
+    font-size: 4.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.hero p {
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+.hero a {
+    padding: 14px 40px;
+    border: 2px solid white;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.hero a:hover {
+    background-color: white;
+    color: var(--azul-medio);
+}
+
+.bloco {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 10%;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.bloco:nth-child(even) {
+    flex-direction: row-reverse;
+    background-color: #f7f9fc;
+}
+
+.texto {
+    flex: 1;
+}
+
+.texto h2 {
+    font-size: 2.5rem;
+    color: var(--azul-medio);
+    margin-bottom: 20px;
+}
+
+.texto p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.imagem {
+    flex: 1;
+}
+
+.imagem img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.equipe {
+    text-align: center;
+    padding: 60px 10%;
+}
+
+.equipe h2 {
+    font-size: 2.5rem;
+    color: var(--azul-escuro);
+    margin-bottom: 40px;
+}
+
+.membros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.membro {
+    width: 220px;
+    background-color: #f0f4f8;
+    border-radius: 15px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.membro:hover {
+    transform: translateY(-5px);
+}
+
+.membro img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.membro h4 {
+    margin: 15px 0 5px;
+    font-size: 1.1rem;
+    color: var(--azul-medio);
+}
+
+.membro p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+@media (max-width: 1200px) {
+    .hero {
+        background-size: 150%;
+        height: 80vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        background-size: 200%;
+        height: 60vh;
+    }
+
+    .bloco {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .texto h2 {
+        font-size: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .membro {
+        width: 65%;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero {
+        background-size: 250%;
+        height: 50vh;
+    }
+}
