@@ -1,61 +1,51 @@
-# \U0001f680 DesenvolveTEC (T�tulo Provis�rio)
+# 🚀 DesenvolveTEC: Sistema Web TCC
 
-> Seu Sistema Web para TCC (Trabalho de Conclus�o de Curso)
+> Aplicação Web Full-Stack desenvolvida para o Trabalho de Conclusão de Curso (TCC).
 
-## \U0001f31f Sobre o Projeto
+## 🌟 Sobre o Projeto
 
-Este reposit�rio cont�m o c�digo-fonte do projeto **DesenvolveTEC**, desenvolvido como parte do requisito para a conclus�o do curso Informátia Para internet.
+Este repositório contém o código-fonte final do projeto **DesenvolveTEC**.
 
-A aplica��o tem como objetivo principal [**Objetivo Central** -  fornecer uma plataforma de gerenciamento de servi�os e contato com clientes, ou um sistema de agendamento, etc.].
+O projeto tem como objetivo [**APLICAÇÂO WEB** -  apresentar uma solução inovadora para o gerenciamento de eventos educacionais ou funcionar como um portfólio profissional interativo, etc.].
 
-O projeto � uma aplica��o web completa, desenvolvida para demonstrar profici�ncia em [Insira as Principais �reas de Foco, Ex: desenvolvimento full-stack, seguran�a de dados, arquitetura web].
+É uma aplicação web completa, desenvolvida para demonstrar proficiência nas tecnologias [Inforamática para Internet].
 
-## \u2728 Funcionalidades Principais
+## ✨ Funcionalidades Principais
 
-* **P�ginas Institucionais:** Se��es como `Sobre`, `Servi�os` e `Contato` (`sobre.php`, `servicos.php`, `contato.php`).
-* **Conex�o com Banco de Dados:** Estrutura para gerenciamento de dados persistentes (`paginas/conexao.php`).
-* **Gest�o de Dados:** Inser��o, consulta e manipula��o de informa��es via banco de dados (`bd/desenvolvetec.sql` e scripts PHP).
-* **Estiliza��o:** Design responsivo e customizado atrav�s de CSS (`css/estilo.css`).
+* **Estrutura Institucional:** Páginas essenciais (`sobre.php`, `servicos.php`, `contato.php`).
+* **Gerenciamento de Banco de Dados:** Conexão e manipulação de informações utilizando MySQL.
+* **Formulários de Interação:** Formulário de contato com persistência de dados (ou envio de e-mail).
+* **Design Responsivo:** Estilização baseada em CSS3 para diferentes dispositivos.
 
-## \U0001f6e0\ufe0f Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 
-O projeto foi constru�do com as seguintes tecnologias:
+| Categoria | Tecnologia |
+| :--- | :--- |
+| **Backend** | **PHP** (para lógica e controle de dados) |
+| **Banco de Dados** | **MySQL/MariaDB** (Script de criação da base de dados em `bd/desenvolvetec.sql`) |
+| **Frontend** | **HTML5** e **CSS3** |
+| **Ambiente** | **Servidor Web Apache** (via XAMPP/WAMP) |
 
-* **Backend:** **PHP** 
-* **Banco de Dados:** **MySQL/MariaDB** (Script SQL fornecido em `bd/desenvolvetec.sql`)
-* **Frontend:** **HTML5** e **CSS3**
-* **Servidor:** Requer um ambiente de servidor (como **Apache** ou **Nginx**) e o interpretador PHP (geralmente via **XAMPP** ou **WAMP**).
+## ⚙️ Instalação e Execução Local
 
-## \u2699\ufe0f Instala��o e Execu��o Local
+Para rodar a aplicação localmente, siga os passos abaixo:
 
-Siga os passos abaixo para configurar e executar o projeto em seu ambiente local.
+1.  **Pré-requisito:** Instale um ambiente de servidor local (XAMPP, WAMP, MAMP).
 
-### Pr�-requisitos
+2.  **Mova a Pasta:** Coloque a pasta `TCC` dentro do diretório de documentos do seu servidor (Ex: `htdocs` no XAMPP).
 
-* Servidor web 
-* Interpretador PHP
-* Cliente MySQL
+3.  **Configuração do Banco de Dados:**
+    * Crie um banco de dados chamado `desenvolvetec`.
+    * Importe o arquivo `bd/desenvolvetec.sql` neste banco de dados.
 
-### Passos
+4.  **Acesso:** Acesse o projeto no seu navegador: `http://localhost/TCC/`
 
-1.  **Clone o Reposit�rio:**
-    ```bash
-    git clone [https://github.com/BrunoMarquesRedol/TCC.git](https://github.com/BrunoMarquesRedol/TCC.git)
-    ```
+## 📧 Contato
 
-2.  **Configurar o Servidor:**
-    * Mova a pasta do projeto (`TCC`) para o diret�rio de projetos do seu servidor web (Ex: `htdocs` no XAMPP).
+Para mais informações sobre o projeto, entre em contato:
 
-3.  **Configurar o Banco de Dados:**
-    * Crie um novo banco de dados no seu cliente MySQL (Ex: phpMyAdmin). Sugest�o de nome: `desenvolvetec`.
-    * Importe o arquivo `bd/desenvolvetec.sql` para este novo banco de dados.
+* **Autor:** Bruno Marques Redol
+* **Email:** brunomarquesredol@gmail.com
+* **LinkedIn:** www.linkedin.com/in/brunoredol
 
-4.  **Ajustar a Conex�o (se necess�rio):**
-    * Verifique e ajuste as credenciais de conex�o no arquivo `paginas/conexao.php` para corresponderem �s configura��es do seu banco de dados local (usu�rio, senha, nome do banco).
-
-5.  **Acessar a Aplica��o:**
-    * Abra o navegador e acesse o endere�o: `http://localhost/TCC/` (ou o nome do diret�rio principal).
-
-## \U0001f91d Contribui��o
-
-Este � um projeto de TCCl, mas feedbacks e sugest�es s�o bem-vindos.
+---
